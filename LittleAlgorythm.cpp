@@ -125,14 +125,6 @@ void Edge_matrix(int n, int** X, int row, int col) // edge matrix
         if (X[i][col] == _inf)
             j_inf = i;
     }
-    if (i_inf == -1 || j_inf == -1)
-    {
-        cout << "Infinum not found" << endl;
-        cout << "row = " << row << ", col = " << col << endl;
-        cout << "i_inf = " << i_inf << ", j_inf = " << j_inf << endl;
-        Print_matrix(n, X);
-        exit(1);
-    }
     X[j_inf][i_inf] = _inf;
 
     for (int i = 0; i < n - 1; ++i)
